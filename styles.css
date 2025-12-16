@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d1117; /* dark background */
+    color: #c9d1d9; /* light text for contrast */
+    line-height: 1.6;
+}
+
+/* ================= HEADER / HERO ================= */
+header {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(135deg, #0d1117, #161b22);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #58a6ff; /* tech blue */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.3rem;
+    color: #8b949e;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    margin-top: 20px;
+    background-color: rgba(13,17,23,0.95);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    display: inline-block;
+    padding: 15px 25px;
+    color: #58a6ff;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #58a6ff;
+    color: #0d1117;
+    border-radius: 5px;
+}
+
+/* ================= HERO / INTRO SECTION ================= */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #161b22, #0d1117);
+    border-radius: 10px;
+    color: #58a6ff;
+    margin: -50px auto 50px auto;
+}
+
+#hero h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+#hero button {
+    background-color: #58a6ff;
+    color: #0d1117;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+#hero button:hover {
+    transform: translateY(-3px);
+    background-color: #1f6feb;
+}
+
+/* ================= MAIN SECTIONS ================= */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #161b22; /* darker tech section */
+    padding: 40px 30px;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    color: #c9d1d9;
+}
+
+h2 {
+    color: #58a6ff;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.highlight {
+    color: #79c0ff;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 25px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* ================= SERVICES CARDS ================= */
+#services div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#services div > div {
+    flex: 1 1 280px;
+    background-color: #0d1117; /* dark card to match theme */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    text-align: center;
+    color: #c9d1d9; /* light text */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+#services div > div h3 {
+    color: #58a6ff; /* heading blue for contrast */
+    margin-bottom: 15px;
+}
+
+#services div > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    background-color: #161b22; /* slightly lighter on hover */
+}
+
+#services div > div p {
+    color: #8b949e; /* light gray for body text */
+}
+
+
+/* ================= CONTACT FORM ================= */
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+form button {
+    background-color: #58a6ff;
+    color: #0d1117;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #1f6feb;
+    transform: translateY(-2px);
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #0d1117;
+    color: #8b949e;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 0.95rem;
+    margin-top: 50px;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 992px) {
+    header h1 { font-size: 2.2rem; }
+    header p { font-size: 1.1rem; }
+    nav a { padding: 12px 15px; }
+    section { padding: 30px 20px; }
+}
+
+@media (max-width: 600px) {
+    header h1 { font-size: 1.8rem; }
+    header p { font-size: 1rem; }
+    nav a { display: block; text-align: center; margin: 5px 0; }
+    #services div { flex-direction: column; align-items: center; }
+}
+
